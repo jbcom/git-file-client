@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "git-file-client"
+version = "1.0.0"
+description = ""
+authors = ["Jon Bogaty <jon@jonbogaty.com>"]
+readme = "README.md"
+packages = [{include = "git_file_client"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+gitops-utils = {git = "https://github.com/jbcom/gitops-utils.git"}
+python-graphql-client = "^0.4.3"
+pygithub = "^2.3.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
